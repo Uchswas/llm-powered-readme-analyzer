@@ -15,14 +15,14 @@ To create this system, we developed a complete **data pipeline**. We scraped ove
 
 **Note:** For more comprehensive details and results of our study, please refer to the [project documentation](Project Documentation.pdf).
 
-
-### Prerequisites
+### How to Use
+#### Prerequisites
 
 - Python 3.x
 - pip 
 - OpenAI API Key
 
-### Fine-Tuning the Model
+#### Fine-Tuning the Model
 
 1. Clone the repository and navigate to `training_and_application`
 2. Create virtual environment: `python3 -m venv venv-readme-genai && source venv-readme-genai/bin/activate`
@@ -34,7 +34,7 @@ This will upload the training file and dispatch the fine-tuning job. Save the `F
 
 
 
-### Running the Application
+#### Running the Application
 
 
 1. Add `FINE_TUNE_MODEL_ID` to `.env` (or use pre-trained model: `ft:gpt-4o-2024-08-06:personal::AUWHEdAd`)
