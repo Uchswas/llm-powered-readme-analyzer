@@ -13,32 +13,8 @@ Our project addresses this problem by providing an automated solution to analyze
 
 To create this system, we developed a complete **data pipeline**. We scraped over 1 million Hugging Face models using **multi-threaded web scraping**. We extracted and parsed README files using **BeautifulSoup**. We manually labeled 200 top READMEs. We transformed the data into **OpenAI's chat format** for fine-tuning. We then integrated the fine-tuned model in a **Flask web application**. The application provides **real-time README analysis** through a simple web interface.
 
-**Note:** For more comprehensive details and results of our study, please refer to the [project documentation](Project Documentation.pdf).
+> **Note**: More comprehensive details and results of our study can be found in [`Project Documentation.pdf`](Project Documentation.pdf).
 
-### How to Use
-#### Prerequisites
-
-- Python 3.x
-- pip 
-- OpenAI API Key
-
-#### Fine-Tuning the Model
-
-1. Clone the repository and navigate to `training_and_application`
-2. Create virtual environment: `python3 -m venv venv-readme-genai && source venv-readme-genai/bin/activate`
-3. Install dependencies: `pip install -r requirements.txt`
-4. Set up `.env` file: copy `.env.example` to `.env` and add your `OPENAI_API_KEY`
-5. Run fine-tuning: `cd src && python3 fine_tune_model.py` 
-
-This will upload the training file and dispatch the fine-tuning job. Save the `FINE_TUNE_MODEL_ID` from the output.
-
-
-
-#### Running the Application
-
-
-1. Add `FINE_TUNE_MODEL_ID` to `.env` (or use pre-trained model: `ft:gpt-4o-2024-08-06:personal::AUWHEdAd`)
-2. Run: `cd web && python3 app.py` (available at `http://127.0.0.1:5000`) 
 
 ### Project Structure
 
@@ -90,7 +66,34 @@ This will upload the training file and dispatch the fine-tuning job. Save the `F
   HTML templates for the web interface (index.html, result.html)  
   *Why:* Templates separate presentation from logic, making the UI easy to modify and maintain.
 
-   
+
+### How to Use
+
+#### Prerequisites
+
+- Python 3.x
+- pip 
+- OpenAI API Key
+
+#### Fine-Tuning the Model
+
+1. Clone the repository and navigate to `training_and_application`
+2. Create virtual environment: `python3 -m venv venv-readme-genai && source venv-readme-genai/bin/activate`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Set up `.env` file: copy `.env.example` to `.env` and add your `OPENAI_API_KEY`
+5. Run fine-tuning: `cd src && python3 fine_tune_model.py` 
+
+This will upload the training file and dispatch the fine-tuning job. Save the `FINE_TUNE_MODEL_ID` from the output.
+
+
+
+#### Running the Application
+
+1. Add `FINE_TUNE_MODEL_ID` to `.env` (or use pre-trained model: `ft:gpt-4o-2024-08-06:personal::AUWHEdAd`)
+2. Run: `cd web && python3 app.py` (available at `http://127.0.0.1:5000`) 
+
+
+
 ### Appendix
 
 **Datasets and Resources:**
