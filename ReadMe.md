@@ -69,28 +69,66 @@ To create this system, we developed a complete **data pipeline**. We scraped ove
 
 ### How to Use
 
+This section provides step-by-step instructions for fine-tuning the model and running the web application.
+
 #### Prerequisites
 
-- Python 3.x
-- pip 
-- OpenAI API Key
+Before getting started, ensure you have the following installed:
+
+- **Python 3.x** - Required for running the application
+- **pip** - Python package manager
+- **OpenAI API Key** - Obtain from [OpenAI Platform](https://platform.openai.com/api-keys)
 
 #### Fine-Tuning the Model
 
-1. Clone the repository and navigate to `training_and_application`
-2. Create virtual environment: `python3 -m venv venv-readme-genai && source venv-readme-genai/bin/activate`
-3. Install dependencies: `pip install -r requirements.txt`
-4. Set up `.env` file: copy `.env.example` to `.env` and add your `OPENAI_API_KEY`
-5. Run fine-tuning: `cd src && python3 fine_tune_model.py` 
+Follow these steps to fine-tune GPT-4o with your custom dataset:
 
-This will upload the training file and dispatch the fine-tuning job. Save the `FINE_TUNE_MODEL_ID` from the output.
+1. **Clone the repository** and navigate to the training directory:
+   ```bash
+   git clone <repository-url>
+   cd training_and_application
+   ```
 
+2. **Create a virtual environment** to isolate dependencies:
+   ```bash
+   python3 -m venv venv-readme-genai
+   source venv-readme-genai/bin/activate
+   ```
 
+3. **Install required dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set up environment variables**:
+   - Copy `.env.example` to `.env`
+   - Add your OpenAI API key: `OPENAI_API_KEY=your_api_key_here`
+
+5. **Run the fine-tuning script**:
+   ```bash
+   cd src
+   python3 fine_tune_model.py
+   ```
+
+   This will upload the training file and dispatch the fine-tuning job. **Save the `FINE_TUNE_MODEL_ID`** from the output for use in the web application.
 
 #### Running the Application
 
-1. Add `FINE_TUNE_MODEL_ID` to `.env` (or use pre-trained model: `ft:gpt-4o-2024-08-06:personal::AUWHEdAd`)
-2. Run: `cd web && python3 app.py` (available at `http://127.0.0.1:5000`) 
+To run the web application:
+
+1. **Configure the model ID** in `.env`:
+   - Add `FINE_TUNE_MODEL_ID=your_model_id` to your `.env` file
+   - Alternatively, use the pre-trained model: `ft:gpt-4o-2024-08-06:personal::AUWHEdAd`
+
+2. **Start the Flask server**:
+   ```bash
+   cd web
+   python3 app.py
+   ```
+
+3. **Access the application**:
+   - Open your browser and navigate to `http://127.0.0.1:5000`
+   - Paste or upload a README file to analyze 
 
 
 
