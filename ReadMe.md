@@ -1,11 +1,12 @@
 ## LLM-Powered README Analyzer
 
 
-![LLM](https://img.shields.io/badge/LLM-FINE--TUNING-10A37F?style=for-the-badge&logo=openai&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4-4A90E2?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LLM](https://img.shields.io/badge/LLM-FINE--TUNING-10A37F.svg)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E.svg)
+![Flask](https://img.shields.io/badge/Flask-000000.svg)
+![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4-4A90E2.svg)
+![Python](https://img.shields.io/badge/Python-3776AB.svg)
+
 
 A well-written README is crucial for open-source projects. It helps developers understand, use, and contribute to models. Poor documentation leads to confusion, lower adoption rates, and wasted time. However, many README files lack essential information or are poorly structured.
 
