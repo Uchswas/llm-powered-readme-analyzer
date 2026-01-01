@@ -13,7 +13,7 @@ Our project addresses this problem by providing an automated solution to analyze
 
 To create this system, we developed a complete **data pipeline**. We scraped over 1 million Hugging Face models using **multi-threaded web scraping**. We extracted and parsed README files using **BeautifulSoup**. We manually labeled 200 top READMEs. We transformed the data into **OpenAI's chat format** for fine-tuning. We then integrated the fine-tuned model in a **Flask web application**. The application provides **real-time README analysis** through a simple web interface.
 
-> **Note**: More comprehensive details and results of our study can be found in [`Project Documentation.pdf`](Project Documentation.pdf).
+> **Note**: More comprehensive details and results of our study can be found in [`Project_Documentation.pdf`](Project_Documentation.pdf).
 
 
 ### Project Structure
